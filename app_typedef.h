@@ -14,12 +14,23 @@
 
 #define	DEBUG
 
-typedef 	uint16_t 	error_type	;
-
-#define		APP_REPORT(type, id_error)		((type << 8) | id_error)
+#define 	GPIO_NUMBER(bank, index)    ((((bank)-1)*32)+((index)&31))
 
 /*
- * @brief	Enum de canales de medida
+ * GPIO Definition
+ */
+#define		SIM_CTRL				GPIO_NUMBER(5, 7)		// Multiplexor de tarjeta SIM 					(id 135, J2.37 <-- 127)
+#define		PORTASIM_PRES			GPIO_NUMBER(2, 4)		// Detector del PortaSIM 						(id 36,  J2.80 <-- 170)
+#define		EN_5V_USB_MOB			GPIO_NUMBER(5, 9)		// Conector USB 5V del terminal movil			(id 137, J2.49 <-- 139)
+#define		EN_4V2					GPIO_NUMBER(1, 4)		// Conector 4V2 bateria del terminal movil		(id 4,   J2.52 <-- 142)
+#define		PWDN_CURR_SENSOR		GPIO_NUMBER(5, 1)		// Enable PAC1932								(id 129, J2.64 <-- 154)
+#define		ALERT_CURR_SENSOR		GPIO_NUMBER(5, 8)		// Alert PAC1932								(id 136, J2.39 <-- 129)
+#define		TEMP_DRDY				GPIO_NUMBER(1, 0)		// Temp data ready								(id 0,   J2.60 <-- 150)
+#define		LED_RST					GPIO_NUMBER(1, 2)		// Enable PCA9532 								(id 2,   J2.48 <-- 138)
+
+
+/*
+ * @brief	Enum de canales de medida de valores electricos
  */
 typedef enum {
 
@@ -54,11 +65,6 @@ typedef struct {
 	uint32_t	Acc_Count;	// Numero de acumulaciones (sumas) realizadas en los registros VPOWERn_ACC
 
 }PAC1932_struct;
-
-#define		HTS221		0
-#define		GPIO		1
-#define		PAC1932		2
-#define		PCA9532		3
 
 
 #endif /* APP_TYPEDEF_H_ */
