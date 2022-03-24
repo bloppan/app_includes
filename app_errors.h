@@ -27,7 +27,7 @@ typedef 	uint16_t 	error_type	;
 #define		PCA9532			5
 #define		CAN				6
 #define		WSEN_TIDS		7
-
+#define		APP_DAEMON		8
 /*
  * GPIO Errors	(id_error)
  */
@@ -77,5 +77,15 @@ typedef 	uint16_t 	error_type	;
  */
 #define		SEND_RESET_COMMAND				27
 #define		SEND_CTRL_COMMAND				28
+/*
+ * APP DAEMON Errors (id error)
+ */
+#define		CONNECTION_LOST					29
+#define		SELECT_SOCKET					30
+#define		READING_SOCKET					31
+#define		WRITING_SOCKET					32
+#define		CLOSING_SOCKET					33
+#define		CONNECTING_SOCKET				34
+
 
 #endif /* APP_ERRORS_H_ */
