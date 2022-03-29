@@ -25,6 +25,7 @@
  */
 #define		SIM_CTRL				GPIO_NUMBER(5, 7)		// Multiplexor de tarjeta SIM 					(id 135, J2.37 <-- 127)
 #define		PORTASIM_PRES			GPIO_NUMBER(1, 0)		// Detector del PortaSIM 						(id 36,  J2.80 <-- 170)
+#define		SAI_DETECT				GPIO_NUMBER(1, 24)		// Detector de alimentacion SAI					(id 24,  J1.59)
 #define		EN_5V_USB_MOB			GPIO_NUMBER(5, 9)		// Conector USB 5V del terminal movil			(id 137, J2.49 <-- 139)
 #define		EN_4V2					GPIO_NUMBER(1, 4)		// Conector 4V2 bateria del terminal movil		(id 4,   J2.52 <-- 142)
 #define		PWDN_CURR_SENSOR		GPIO_NUMBER(5, 1)		// Enable PAC1932								(id 129, J2.64 <-- 154)
