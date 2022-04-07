@@ -35,6 +35,11 @@
 #define		FANOUT_1				GPIO_NUMBER(1, 5)		// Ventilador 1
 #define		FANOUT_2				GPIO_NUMBER(1, 9)		// Ventilador 2
 
+
+#define		NO_BLINK		0		// Sin parpadeo
+#define		BLINK_LVL_1		1		// Parpadeo nivel 1
+#define		BLINK_LVL_2		2		// Parpadeo nivel 2
+
 /*
  * @brief	Enum de canales de medida de valores electricos
  */
